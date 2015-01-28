@@ -1,8 +1,8 @@
-%! ROOT TEX = UnivBooth_DATE15.tex
+%!TEX root = Main.tex
 
-\section{Background and Related Work}
+\section{The first Section}
 
-  The application of analog layout generation is widely developed in academia and industry. Commercial tools like Cadence Virtuoso ADE, Synopsys Laker have provided template-based schematic-driven analog layout generator. However, the generated layout mostly keeps the original topology. Our software integrates mechanisms from \cite{ALP_YPWeng_iccad2011,Chin_DMR_ICCAD2013,PAGE_DATE2013}. The device sizes of targeting technology is generated from \cite{PAGE_DATE2013}. In \cite{ALP_YPWeng_iccad2011}, it provides multiple placement results withholding analog layout constraints. For routing generation, \cite{Chin_DMR_ICCAD2013} preserves the behavior of routing from the reference layout and fast generates routing on the targeting layout.
+  Content in first section \cite{Chin_DMR_ICCAD2013}
 
    
 
@@ -29,8 +29,28 @@
 \section{Program Setting and Results}
   
   Our Software is developed with g++ 4.1.2 for methodology, Synopsys $\text{PyCell Studio}^{\text{TM} }$ 4.7.1 for layout realization and Qt 4.8.4 for GUI demonstration. We also display the layout with the reference one and the generated layout via $\text{Cadence}^{\text{\textregistered}}$ $\text{Virtuoso}^{\text{\textregistered}}$ 6.1.5. The migration of a variable-gain amplifier (VGA), a folded-cascode operational amplifier (OpAmp) and low dropout regulator (LDO) will be demonstrated step-by-step as applications to show the feasibility of our Software. 
-  %for migration and hierarchical prototypes generation. The numerical results of routing and performance are listed in Table~\ref{table:MigrationPerf}. Comparing with manual layout (ML), the preserved prototyping layout (PPL) earns better design time with qualified performance. 
-  %Moreover, PPL also rewords better routing completness than non-preserved automatic layout (NAL). 
-  %These results demonstrate that the proposed framework effectively contributes the reusability of analog layout and efficiently boosts the productivity with qualified performance. 
-
-  %Our contributions not only favor advanced analog IC industries, but also raise a practical application for constrained Delaunay triangulation. We tend to submit this work to Design Automation and Testing in Europe, Design Automation Conference, International Conference on Computer-Aided Design in the near future.
+  \begin{table}[ht]
+      \begin{center}
+      \scriptsize
+      \caption{Specification of experimental circuits: OpAmp and VGA}\label{table:Spec}
+      \begin{tabular}{|l|c|c|}
+      \hline
+        Circuit   & OpAmp & VGA \\ 
+        \hline
+        technology  & umc90nm & umc90nm     \\
+        \hline
+        $V_{dd}ㄌ$     & 1V    & 1.1V        \\
+        \hline
+        Load Capacitance  & 200pF & 1.5pF   \\
+        \hline
+        Gain    & $\geq 48.653dB$ & $\geq 18.48dB$      \\
+        \hline
+        Gain Bandwidth &  $\geq 100 MHz$ & $\geq 5MHz$      \\
+        \hline
+        Phase Margin  & $\geq 45deg$ & $\geq 45deg$     \\
+        \hline
+        Area    & 832.66 $\mu m^2$  & 10889.88 $\mu m^2$  \\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
