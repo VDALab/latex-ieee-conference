@@ -1,0 +1,45 @@
+\documentclass[10pt,conference]{IEEEtran}
+
+\usepackage{url,graphicx,subfigure,algcompatible,comment,amsmath,units,epsfig,threeparttable,multirow,colortbl,booktabs,setspace,textcomp}
+
+
+\usepackage[ruled]{algorithm2e}
+
+\title{Module Simulation-based Analog Placement Generation}
+\author{
+\IEEEauthorblockN{ Hung-Wen Huang\IEEEauthorrefmark{1}, Po-Cheng Pan\IEEEauthorrefmark{1}, Prof. Hung-Ming Chen\IEEEauthorrefmark{1}\\}
+\IEEEauthorblockA{\IEEEauthorrefmark{1}Institute of Electronics and SoC Center, National Chiao Tung University, Hsinchu, Taiwan\\}
+\IEEEauthorblockA{Email: nil113.cs00@nctu.edu.tw; benbean.ee96g@g2.nctu.edu.tw; hmchen@mail.nctu.edu.tw}
+
+  %\thanks{
+  %{\scriptsize
+  %  This work was partially supported by the National Science Council of Taiwan ROC under grant No. NSC 102-2220-E-009-024
+    
+
+  %  \noindent
+  %  978-1-4799-1071-7/13/\$31.00 \copyright2017 IEEE }
+  %}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+  The development of analog IC layout generation remains a challenge due to the imprecise estimation of circuit performance in advanced technology. However, the previous late-stage simulation results of modules can be reused for the purpose of mitigation of simulation gap in current analog placement generation. In this work, a new hierarchical flow is proposed to synthesize layout solutions based on the geometric preservation of user-defined constraints and previously generated layouts. The constraints of the circuit is priorly tackled in the partition and layout enumeration stage. In addition, we integrate the simulation and performance factors into the cost function in the layout enumeration strategy. The experiments show that this flow yields valid analog layout results whose performances are better than the those in previous approaches.
+
+\end{abstract}
+
+%\keywords{Partitioning, floorplanning, analog ICs, slicing tree, Physical Design, hMETIS, Defer, post-simulation}
+
+\input{Introduction}
+\input{Preliminaries}
+\input{Content}
+\input{Experiments}
+\input{Conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEfull,IEEEabrv,IEEEexample,Reference}
+
+\end{document}
