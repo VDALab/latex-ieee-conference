@@ -9,18 +9,18 @@
 \section{Flow of Our Framework}
   \begin{figure}[ht]
     \centering
-    \centerline{\epsfig{file=Fig/proto_flow.eps,height=7cm}}
+    \includegraphics[width=\linewidth]{Fig/proto_flow.eps}
     \caption{Overall flow of the proposed layout migration framework.} 
-    \centering{\label{fig:Flow}}
+    \label{fig:Flow}
   \end{figure}
 
 
   In order to provide fast prototyping for layout migration, this software extracted the reference layout with placement and routing respectively. The migrated layout is generated according to the extracted information. and then it dumps into real design after physical verification for performance simulation. Fig.~\ref{fig:Flow} shows the overall flow diagram of our methodology.
   The flow is mainly separated into three stages: 
   \begin{enumerate}
-    \item {\bf Extraction and Preservation}: A layout extraction and preservation technique \cite{Chin_DMR_ICCAD2013} can not only be applied to generalized layout, but also hierarchical design.
-    \item {\bf Prototyping}: The preserved topology of original layout can be generated into multiple layout candidates with placement and routing. 
-    \item {\bf Wire optimization}: A detailed routing refinement is applied automatically to route the unrouted nets for final verification and simulation.
+    \item {\bf First contribution}: A contribution which related to \cite{Chin_DMR_ICCAD2013} can not only be applied to my work.
+    \item {\bf Second contribution}: contribution details. 
+    \item {\bf Third contribution}: contribution details.
   \end{enumerate}
 
   In the end, a set of layouts with refinement is obtained, which provides designers a quick look of possible solutions that can be used. The layout results are automatically dumped into industrial layouts for demonstration and simulation. 
